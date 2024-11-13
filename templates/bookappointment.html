@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctors Login</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #d0d7db;
+        padding: 20px;
+        /* background-image: url("https://img.freepik.com/free-photo/blurred-abstract-background-interior-view-looking-out-toward-empty-office-lobby-entrance-doors-glass-curtain-wall-with-frame_1339-6363.jpg?t=st=1728824321~exp=1728827921~hmac=8f1dc722b8b9e063ffbf5151cf341447d370d95ca268427f3e0a8770b5c378f2&w=740");
+        background-repeat: no-repeat; */
+      }
+      .login-form {
+        background: white;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        margin: auto;
+        justify-content: center;
+        margin-top: 50px;
+      }
+      .input-group {
+        margin-bottom: 15px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+      input[type="text"],
+      input[type="password"],
+      input[type="date"],
+      input[type="time"],
+      textarea {
+        width: 90%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      button {
+        background-color: rgb(91, 134, 175);
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+      }
+      /* button:hover {
+        background-color: #ddb61ab9;
+      } */
+      p {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="login-form" action="/bookappointment" method="post">
+      <h3 style="text-align: center">Appointment Details</h3>
+
+      <div class="input-group">
+        <label for="appointment-date"><strong>Date</strong></label>
+        <input
+          type="date"
+          id="appointment-date"
+          name="appointment_date"
+          required
+        />
+      </div>
+
+      <div class="input-group">
+        <label for="appointment-time"><strong>Time</strong></label>
+        <input
+          type="time"
+          id="appointment-time"
+          name="appointment_time"
+          required
+        />
+      </div>
+
+      <div class="input-group">
+        <label for="reason"><strong>Reason for Appointment</strong></label>
+        <textarea
+          id="reason"
+          name="reason"
+          required
+          rows="4"
+          placeholder="Enter the reason for your appointment"
+        ></textarea>
+      </div>
+
+      <button type="submit">Book appointment</button>
+      <!-- <p>Don’t have an account? <a href="/doctsignup">Signup here</a></p> -->
+    </form>
+  </body>
+</html>

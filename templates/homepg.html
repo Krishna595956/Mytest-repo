@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor Consultation and Best Practices</title>
+    <link rel="stylesheet" href="../static/homepg.css"" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img
+          src="https://media.istockphoto.com/id/1279385296/vector/health-and-medical-vector-stock-illustration-design-health-care-illustration.jpg?s=612x612&w=0&k=20&c=H-UmDQnb2wxHrKgpK7Gb4CGciAi_eV5wFnLfa5lozI4="
+          alt="Med Logo"
+        />
+        <h3>MEDICOVER</h3>
+      </div>
+      <div class="search-box">
+        <input type="text" id="search" placeholder="Search..." />
+        <button id="search-btn">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/622/622669.png"
+            alt="Search Icon"
+          />
+        </button>
+      </div>
+      <div class="user-actions">
+        <button>
+          <a href="/" style="color: aliceblue">Logout</a>
+        </button>
+      </div>
+    </header>
+
+    <nav>
+      <a href="/pharmacy">Pharmacy</a>
+      <a href="/Aboutus">About us</a>
+      <a href="#doctors">Doctors</a>
+      <a href="/Reviews">Reviews</a>
+      <a href="/Contactus">Contact Us</a>
+      <a href="/patientprof1">Profile</a>
+      <a href="/myappointments">My appointments</a>
+    </nav>
+    <section class="consultation-options">
+      <div class="teleconsultation" style="background-image: url('/bg.png')">
+        <img
+          src="https://img.freepik.com/free-photo/doctor-offering-medical-teleconsultation_23-2149328999.jpg?t=st=1728757554~exp=1728761154~hmac=7f62dad1f11fd7f4298c74514dd6509e8a0e1713bf92c426b7a32ed0976409e9&w=740 "
+          width="400"
+          height="200"
+          alt="teliconsultation"
+        />
+        <h2>Make an appointment for <strong>Online Consultation</strong></h2>
+        <!-- <button>See who is available online →</button> -->
+      </div>
+      <div class="doctor-visit" style="background-image: url('/bg.png')">
+        <img
+          src="https://img.freepik.com/premium-photo/photo-male-patient-writes-all-details-makes-notes-consultancy-with-doctor-sit-spacious-office_95891-2457.jpg?w=740 "
+          width="400"
+          height="200"
+          alt="doctor visit"
+        />
+        <h2>Make an appointment for <strong>Doctor Visit</strong></h2>
+        <!-- <button>See who is available →</button> -->
+      </div>
+    </section>
+
+    <section class="specializations" id="doctors">
+      <h3>By Specialization</h3>
+      <div class="specialization-grid">
+        <a
+          href="/filterdoctors?type=Generalmedicine"
+          class="specialization-item"
+        >
+          <img
+            src="https://img.freepik.com/premium-photo/red-stethoscope-with-heart-it_1281144-12400.jpg"
+            alt="General Medicine Logo"
+          />
+          <span>General Medicine</span>
+        </a>
+        <a href="/filterdoctors?type=ENT" class="specialization-item">
+          <img
+            src="https://www.sarvadnyahospital.com/wp-content/uploads/2021/01/ent.png"
+            alt="ENT Logo"
+          />
+          <span>ENT</span>
+        </a>
+        <a href="/filterdoctors?type=Cardiology" class="specialization-item">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Human_Heart_and_Circulatory_System.png/1280px-Human_Heart_and_Circulatory_System.png"
+            alt="Cardiology Logo"
+          />
+          <span>Cardiology</span>
+        </a>
+        <a href="/filterdoctors?type=Pulmonary" class="specialization-item">
+          <img
+            src="https://www.nimshospital.com/assets/img/departments/PULMONOLOGY.png"
+            alt="Pulmonary Medicine Logo"
+          />
+          <span>Pulmonary Medicine</span>
+        </a>
+        <a href="/filterdoctors?type=orthopaedics" class="specialization-item">
+          <img
+            src="https://spfort.com/wp-content/uploads/2022/09/md-pic.jpg"
+            alt="Orthopaedics Logo"
+          />
+          <span>Orthopaedics</span>
+        </a>
+        <a href="/filterdoctors?type=gynaecology" class="specialization-item">
+          <img
+            src="https://www.yashodahealthcare.com/blogs/wp-content/uploads/2024/01/WhatsApp-Image-2024-01-08-at-18.02.26-1536x864.jpeg"
+            alt="Gynaecology Logo"
+          />
+          <span>Gynaecology</span>
+        </a>
+        <a href="/filterdoctors?type=diabetology" class="specialization-item">
+          <img
+            src="https://img.freepik.com/free-photo/high-angle-diabetic-woman-checking-her-glucose-level_23-2150756373.jpg?t=st=1728756725~exp=1728760325~hmac=12bf02b734c0a2ba75aea82c297d38ace9c4fef26892567af815ad24c86a6a95&w=740"
+            alt="Diabetology Logo"
+          />
+          <span>Diabetology</span>
+        </a>
+        <a href="/filterdoctors?type=pregnancy" class="specialization-item">
+          <img
+            src="https://cdn-assets-eu.frontify.com/s3/frontify-enterprise-files-eu/eyJwYXRoIjoiaWhoLWhlYWx0aGNhcmUtYmVyaGFkXC9maWxlXC9VZzJWSEpWbzE1MVV1NHc2R3ZUVy5qcGcifQ:ihh-healthcare-berhad:UJc5A3me3nhj8s1jmoiXt65k9xFl0FkUAqBxmYj73Zk?format=webp"
+            alt="Complicated Pregnancy Logo"
+          />
+          <span>Complicated Pregnancy</span>
+        </a>
+        <a href="/filterdoctors?type=paediatrics" class="specialization-item">
+          <img
+            src="https://img.freepik.com/premium-photo/pediatrics-doctor-examines-baby-boy-concept-medicine-health_267293-3735.jpg?w=740"
+            alt="Paediatrics Logo"
+          />
+          <span>Paediatrics</span>
+        </a>
+        <a
+          href="/filterdoctors?type=dermatologyvenerelogy"
+          class="specialization-item"
+        >
+          <img
+            src="https://img.freepik.com/premium-photo/procedure-mechanical-manual-face-cleansing-by-beautician-professional-skin-peeling_545646-268.jpg?w=740"
+            alt="Dermatology Venereology Logo"
+          />
+          <span>Dermatology Venereology</span>
+        </a>
+        <!-- Add more specializations as necessary -->
+      </div>
+    </section>
+
+    <section class="best-practices">
+      <h2>Best Practices We Offer</h2>
+      <div class="practices-container">
+        <div class="practice-item">
+          <img
+            src="https://img.freepik.com/premium-photo/insurance-vector-icon-design-illustration_1174953-26136.jpg?w=740"
+            alt="Safe & Secure Icon"
+          />
+          <h3>100% Safe & Secure</h3>
+          <p>
+            We take all safety and hygiene measures to keep our customers safe.
+          </p>
+        </div>
+
+        <div class="practice-item">
+          <img
+            src="https://img.freepik.com/premium-photo/yellow-folder-red-stethoscope_869423-41.jpg?w=740"
+            alt="Online Health Records Icon"
+          />
+          <h3>Online Health Records</h3>
+          <p>
+            You can access your health records online and download them all at
+            one place.
+          </p>
+        </div>
+
+        <div class="practice-item">
+          <img
+            src="https://img.freepik.com/premium-photo/3d-icons-people-with-speech-bubble-isolated-white-background-discussion-icon_59529-5587.jpg?w=740"
+            alt="Consultation Icon"
+          />
+          <h3>Online / Walk-In Consultation</h3>
+          <p>
+            Experienced doctors now available for both Online and Walk-In
+            consultations.
+          </p>
+        </div>
+
+        <div class="practice-item">
+          <img
+            src="https://img.freepik.com/free-photo/rag-doll-carrying-boxes-wheelbarrow_1156-171.jpg?t=st=1728723919~exp=1728727519~hmac=d33616cd12f2c56d65931ba13fdff0782bff4e6c0ac73a557a3cfd5cd804ab58&w=740"
+            alt="MedPlus Advantage Icon"
+          />
+          <h3>Advantage</h3>
+          <p>Enjoy up to 50% discount on Doctor Consultations.</p>
+        </div>
+
+        <div class="practice-item">
+          <img
+            src="https://img.freepik.com/premium-photo/donation-vector-icon-design-illustration_1174953-26175.jpg?w=740"
+            alt="Competitive Prices Icon"
+          />
+          <h3>Competitive Prices</h3>
+          <p>
+            Our prices for doctor consultations and diagnostics are the best in
+            the business.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-dark bg-footer" id="contact">
+      <div class="container">
+        <div class="row">
+          <!-- About Us Section -->
+          <div class="col-lg-4">
+            <h5 class="text-light">About Us</h5>
+            <p class="text-light">
+              We are a leading healthcare provider offering the best online and
+              offline doctor consultation services. Our platform connects you
+              with certified doctors, ensuring you receive the care you need,
+              wherever you are.
+            </p>
+            <p class="text-light">
+              <i class="fa fa-location"></i> 123 Health St, Med City
+            </p>
+            <p class="text-light">
+              <i class="fa fa-phone"></i> (+91) 9515234443
+            </p>
+            <p class="text-light">
+              <i class="fa fa-envelope"></i> support@healthcare.com
+            </p>
+          </div>
+
+          <!-- Quick Links Section -->
+          <div class="col-lg-4">
+            <h5 class="text-light">Quick Links</h5>
+            <ul class="list-unstyled">
+              <li style="list-style-type: none">
+                <a href="#home" class="text-light">Home</a>
+              </li>
+              <li style="list-style-type: none">
+                <a href="#popular" class="text-light"
+                  >Popular Specializations</a
+                >
+              </li>
+              <li style="list-style-type: none">
+                <a href="#service" class="text-light">Our Services</a>
+              </li>
+              <li style="list-style-type: none">
+                <a href="#appointment" class="text-light"
+                  >Book an Appointment</a
+                >
+              </li>
+              <li style="list-style-type: none">
+                <a href="/Reviews" class="text-light">Patient Reviews</a>
+              </li>
+              <li style="list-style-type: none">
+                <a href="#news" class="text-light">Health News</a>
+              </li>
+              <li style="list-style-type: none">
+                <a href="/Contactus" class="text-light">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Stay Connected Section -->
+          <div class="col-lg-4">
+            <h5 class="text-light">Stay Connected</h5>
+            <ul class="list-unstyled">
+              <li style="list-style-type: none">
+                <a href="#" class="text-light"
+                  ><i class="fab fa-facebook"></i> Facebook</a
+                >
+              </li>
+              <li style="list-style-type: none">
+                <a href="#" class="text-light"
+                  ><i class="fab fa-linkedin"></i> LinkedIn</a
+                >
+              </li>
+              <li style="list-style-type: none">
+                <a href="#" class="text-light"
+                  ><i class="fab fa-instagram"></i> Instagram</a
+                >
+              </li>
+              <li style="list-style-type: none">
+                <a href="#" class="text-light"
+                  ><i class="fab fa-twitter"></i> Twitter</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <hr />
+
+        <!-- Footer Bottom Section -->
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <p class="text-light">
+              Copyright &copy; 2024
+              <a href="#" class="text-light">MEDICOVER</a>. All Rights Reserved.
+              | <a href="#privacy" class="text-light">Privacy Policy</a> |
+              <a href="#terms" class="text-light">Terms of Use</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="../static/homepg.js"></script>
+  </body>
+</html>

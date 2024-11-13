@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor's Home Page</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #d0d7db;
+      }
+
+      header {
+        background-color: rgb(91, 134, 175);
+        padding: 1%;
+        text-align: center;
+      }
+
+      .doctor-img {
+        width: 80%;
+        height: auto;
+        max-width: 300px;
+      }
+
+      .appointment-section .card {
+        border: 1px solid #f2f4f5;
+        border-radius: 8px;
+      }
+
+      .appointment-section .btn-success {
+        background-color: #28a745;
+      }
+
+      .appointment-section .btn-danger {
+        background-color: #dc3545;
+      }
+
+      table {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <h1>Welcome to Doctor Home Page</h1>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-4">
+          <!-- Doctor's Image -->
+          <img
+            src="{{data['image_url']}}"
+            alt="Doctor's Image"
+            class="img-fluid rounded-circle doctor-img"
+          />
+        </div>
+
+        <div class="col-md-8">
+          <!-- Doctor's Info -->
+          <h1>Doctor Profile</h1>
+
+          <table class="table table-bordered">
+            <tbody>
+              <tr>
+                <td><strong>Name</strong></td>
+                <td><strong>{{ data['username'] }}</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Specialization</strong></td>
+                <td><strong>{{ data['specialization'] }}</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Experience</strong></td>
+                <td><strong>{{ data['experience'] }}</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Workplace</strong></td>
+                <td><strong>{{ data['working'] }}</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Appointment Section -->
+      <div class="appointment-section mt-5">
+        <h3>Pending Appointment Invitations</h3>
+        {% for i in data1 %}
+        <div class="card mt-3">
+          <div class="card-body">
+            <h5 class="card-title">{{i['bookedby']}}</h5>
+            <p class="card-text">
+              <strong>Patient :</strong> {{i['bookedby']}}
+            </p>
+            <p class="card-text">
+              <strong>Date:</strong> {{i['ad']}}, {{i['at']}}
+            </p>
+            <p class="card-text"><strong>Reason:</strong>{{i['reason']}}</p>
+            <a href="/acceptappointment?id={{i['_id']}}"
+              ><button class="btn btn-success mr-2">Accept</button></a
+            >
+            <a href="/rejectappointment?id={{i['_id']}}"
+              ><button class="btn btn-danger mr-2">Reject</button></a
+            >
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
