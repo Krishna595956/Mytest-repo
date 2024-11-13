@@ -232,6 +232,12 @@ def rejapp():
   x=appointments.find({"bookeddoctor":session['username'],"status":"pending"})
   return render_template('docthmpg.html',data=u,data1=x)
   
+@app.route('/dealer/add_car')
+def add_car():
+    # This route will render the addcar.html page
+    return render_template('addCar.html',role=session['role'])
+
+
 
 if __name__=="__main__":
   app.run(port=2761,debug=True)
